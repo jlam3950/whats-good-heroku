@@ -10,7 +10,7 @@ import {
   Marker,
 } from "@react-google-maps/api";
 import axios from "axios";
-let googleKey = process.env.REACT_APP_GOOGLE_KEY;
+let googleKey = "AIzaSyARaWZAiT2cK5RWBM83SmN2K_8WeBbuA-0";
 
 const Search = () => {
   const [lat, setLat] = useState("");
