@@ -30,7 +30,7 @@ const Search = () => {
       .replaceAll(" ", "+")
       .replaceAll("/[.,#!$%^&*;:{}=-_`~()]/", "");
 
-    fetch("https://jefflwhatsgood.herokuapp.com/register/getLocation/getLocationWithAddress", {
+    fetch("https://jefflwhatsgood.herokuapp.com/getLocationWithAddress", {
       method: "POST",
       body: JSON.stringify({ address: calledAddress }),
       headers: {
