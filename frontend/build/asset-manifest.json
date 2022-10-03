@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3542b727.css",
+    "main.js": "/static/js/main.173309bb.js",
+    "static/media/jeff.jpg": "/static/media/jeff.7f9b4785f79afe44d788.jpg",
+    "static/media/alt_hero.jpg": "/static/media/alt_hero.b30039976b7fbd37a86b.jpg",
+    "static/media/imposterSeth.jpg": "/static/media/imposterSeth.0c1250a858c02b43eca0.jpg",
+    "static/media/hero-shrimp.jpg": "/static/media/hero-shrimp.e91ab6bf5f8bf36a5233.jpg",
+    "index.html": "/index.html",
+    "main.3542b727.css.map": "/static/css/main.3542b727.css.map",
+    "main.173309bb.js.map": "/static/js/main.173309bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3542b727.css",
+    "static/js/main.173309bb.js"
+  ]
+}

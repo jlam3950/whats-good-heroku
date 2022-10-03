@@ -31,7 +31,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    // origin: "http://localhost:3000",
+    origin: "https://jefflwhatsgood.herokuapp.com/",
     credentials: true,
   })
 );
@@ -62,6 +63,7 @@ require("./passport-config")(passport);
 // }
 
 if (process.env.NODE_ENV === 'production') {
+  console.log('hi');
   app.use(express.static(path.join(__dirname, '../frontend/build')));
 
   app.get('*', (req, res) =>
