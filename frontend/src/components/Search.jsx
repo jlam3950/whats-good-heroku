@@ -79,7 +79,7 @@ const Search = () => {
 
     if (lat !== "") {
       console.log("fetching");
-      fetch("/getLocation", {
+      fetch("https://jefflwhatsgood.herokuapp.com//getLocation", {
         method: "POST",
         body: JSON.stringify({ lat: lat, long: long }),
         headers: {
