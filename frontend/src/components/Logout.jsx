@@ -17,7 +17,8 @@ const Logout = () => {
       Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://localhost:5500/user",
+      // url: "http://localhost:5500/user",
+      url:  "https://jefflwhatsgood.herokuapp.com/user",
     }).then((res) => {
       setData(res.data); 
       console.log(res.data);
@@ -28,7 +29,8 @@ const Logout = () => {
       Axios({
         method: "post",
         withCredentials: true,
-        url: "http://localhost:5500/login",
+        // url: "http://localhost:5500/login",
+        url:  "https://jefflwhatsgood.herokuapp.com/login",
       }).then( setTimeout(() =>{
         removeUser(null);
         navigate('/');

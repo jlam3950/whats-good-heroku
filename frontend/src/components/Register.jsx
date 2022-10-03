@@ -37,13 +37,13 @@ const Register = () => {
         password: pwReg,
       },
       withCredentials: true,
-      url: "http://localhost:5500/register",
+      // url: "http://localhost:5500/register",
+      url: "https://jefflwhatsgood.herokuapp.com/register",
     }).then(
       (res) => setData(res.data),
       setTimeout(() => {
         saveUser(userReg);
         navigate('/');
-        // window.location.replace("http://localhost:3000");
       }, 2000)
     );
   };

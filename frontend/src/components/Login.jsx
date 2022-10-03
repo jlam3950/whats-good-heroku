@@ -30,7 +30,8 @@ const Login = () => {
         password: pwLogin,
       },
       withCredentials: true,
-      url: "http://localhost:5500/login",
+      // url: "http://localhost:5500/login",
+      url:  "https://jefflwhatsgood.herokuapp.com/login",
     }).then((res) => {
       console.log(res.data)
       switch (res.data) {
