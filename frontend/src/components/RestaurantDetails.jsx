@@ -21,7 +21,7 @@ const RestaurantDetails = () => {
   //Fetches data from database. If none, ask to if they'd like to be the first to review an item. Else, pull the data.
   const checkDataBase = async () => {
     if (flag) {
-      await fetch("https://jefflwhatsgood.herokuapp.com/checkDB", {
+      await fetch("/checkDB", {
         method: "post",
         body: JSON.stringify({ id }),
         headers: {
@@ -81,7 +81,7 @@ const RestaurantDetails = () => {
         Reviews: [],
       },
     };
-    fetch("https://jefflwhatsgood.herokuapp.com/register/getLocation/newFoodItem", {
+    fetch("/newFoodItem", {
       method: "post",
       body: JSON.stringify(payload),
       headers: {

@@ -31,7 +31,7 @@ const Login = () => {
       },
       withCredentials: true,
       // url: "http://localhost:5500/login",
-      url:  "https://jefflwhatsgood.herokuapp.com/login",
+      url:  "/login",
     }).then((res) => {
       console.log(res.data)
       switch (res.data) {

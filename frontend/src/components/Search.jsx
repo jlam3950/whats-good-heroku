@@ -30,7 +30,7 @@ const Search = () => {
       .replaceAll(" ", "+")
       .replaceAll("/[.,#!$%^&*;:{}=-_`~()]/", "");
 
-    fetch("https://jefflwhatsgood.herokuapp.com/getLocationWithAddress", {
+    fetch("/getLocationWithAddress", {
       method: "POST",
       body: JSON.stringify({ address: calledAddress }),
       headers: {
@@ -79,7 +79,7 @@ const Search = () => {
 
     if (lat !== "") {
       console.log("fetching");
-      fetch("https://jefflwhatsgood.herokuapp.com/getLocation", {
+      fetch("/getLocation", {
         method: "POST",
         body: JSON.stringify({ lat: lat, long: long }),
         headers: {
@@ -114,25 +114,25 @@ const Search = () => {
     }
   };
 
-  // const GeoCode = () => {
-  //   const location = userAddress;
-  //   axios
-  //     .get("https://maps.googleapis.com/maps/api/geocode/json", {
-  //       params: {
-  //         address: location,
-  //         key: googleKey,
-  //       },
-  //     })
-  //     .then((response) => {
-  //       setLat(response?.data?.results[0].geometry.location.lat);
-  //       setLong(response?.data?.results[0].geometry.location.lng);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
+  const GeoCode = () => {
+    const location = userAddress;
+    axios
+      .get("https://maps.googleapis.com/maps/api/geocode/json", {
+        params: {
+          address: location,
+          key: googleKey,
+        },
+      })
+      .then((response) => {
+        setLat(response?.data?.results[0].geometry.location.lat);
+        setLong(response?.data?.results[0].geometry.location.lng);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-  // GeoCode();
+  GeoCode();
 
   function Map() {
     const [activeMarker, setActiveMarker] = useState("");

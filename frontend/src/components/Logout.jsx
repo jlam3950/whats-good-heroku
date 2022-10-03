@@ -18,7 +18,7 @@ const Logout = () => {
       method: "GET",
       withCredentials: true,
       // url: "http://localhost:5500/user",
-      url:  "https://jefflwhatsgood.herokuapp.com/user",
+      url:  "/user",
     }).then((res) => {
       setData(res.data); 
       console.log(res.data);
@@ -30,7 +30,7 @@ const Logout = () => {
         method: "post",
         withCredentials: true,
         // url: "http://localhost:5500/login",
-        url:  "https://jefflwhatsgood.herokuapp.com/login",
+        url:  "/login",
       }).then( setTimeout(() =>{
         removeUser(null);
         navigate('/');

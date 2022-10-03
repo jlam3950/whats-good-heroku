@@ -84,7 +84,7 @@ const uploadFile = async (file) => {
         },
         newAverageRating: Number(newRating),
       };
-      fetch("https://jefflwhatsgood.herokuapp.com/newReview", {
+      fetch("/newReview", {
         method: "post",
         body: JSON.stringify(payload),
         headers: {

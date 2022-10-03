@@ -38,7 +38,7 @@ const Register = () => {
       },
       withCredentials: true,
       // url: "http://localhost:5500/register",
-      url: "https://jefflwhatsgood.herokuapp.com/register",
+      url: "/register",
     }).then(
       (res) => setData(res.data),
       setTimeout(() => {

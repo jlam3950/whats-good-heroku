@@ -115,7 +115,7 @@ app.get("/login/failed", (req, res) => {
 });
 
 // app.post("/register", (req, res) => {
-app.post("https://jefflwhatsgood.herokuapp.com/register", (req, res) => {
+app.post("/register", (req, res) => {
   User.findOne({ username: req.body.username }, async (err, doc) => {
     if (err) throw err;
     if (doc) res.send("User Already Exists");
@@ -132,7 +132,7 @@ app.post("https://jefflwhatsgood.herokuapp.com/register", (req, res) => {
   });
 });
 
-app.post("https://jefflwhatsgood.herokuapp.com/getLocation", (req, res) => {
+app.post("/getLocation", (req, res) => {
 // app.post("/getLocation", (req, res) => {
   const lat = req.body.lat;
   const long = req.body.long;
@@ -144,7 +144,7 @@ app.post("https://jefflwhatsgood.herokuapp.com/getLocation", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.post("https://jefflwhatsgood.herokuapp.com/getLocationWithAddress", (req, res) => {
+app.post("/getLocationWithAddress", (req, res) => {
 // app.post("/getLocationWithAddress", (req, res) => {
   const address = req.body.address;
   const url = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${address}`;
@@ -155,18 +155,18 @@ app.post("https://jefflwhatsgood.herokuapp.com/getLocationWithAddress", (req, re
     .catch((err) => console.log(err));
 });
 
-app.get("https://jefflwhatsgood.herokuapp.com/user", (req, res) => {
+app.get("/user", (req, res) => {
   res.send(req.user);
 });
 
-app.post("https://jefflwhatsgood.herokuapp.com/user", (req, res) => {
+app.post("/user", (req, res) => {
   req.logout(function (err) {
     if (err) throw err;
   });
 });
 
 // Checks DB if restaurant exists by ID, if so return restaurant data. Not sure if this works. It was based on the User.findOne()
-app.post("https://jefflwhatsgood.herokuapp.com/checkDB", (req, res) => {
+app.post("/checkDB", (req, res) => {
   Restaurant.find({ ID: req.body.id }, async (err, doc) => {
     if (err) throw err;
     else {
@@ -176,7 +176,7 @@ app.post("https://jefflwhatsgood.herokuapp.com/checkDB", (req, res) => {
 });
 
 //Test path, checks to see if we have any restaurant dat
-app.get("https://jefflwhatsgood.herokuapp.com/check", (req, res) =>
+app.get("/check", (req, res) =>
   Restaurant.find({})
     .then((data) => {
       res.json(data);
@@ -186,7 +186,7 @@ app.get("https://jefflwhatsgood.herokuapp.com/check", (req, res) =>
     })
 );
 
-app.post("https://jefflwhatsgood.herokuapp.com/newRestaurant", (req, res) => {
+app.post("/newRestaurant", (req, res) => {
   const newRestaurant = new Restaurant(req.body);
   newRestaurant.save((error) => {
     if (error) {
@@ -200,7 +200,7 @@ app.post("https://jefflwhatsgood.herokuapp.com/newRestaurant", (req, res) => {
 });
 
 //Add New Food Item
-app.post("https://jefflwhatsgood.herokuapp.com/newFoodItem", (req, res) => {
+app.post("/newFoodItem", (req, res) => {
   const { ID, foodData } = req.body;
   Restaurant.updateOne(
     { ID: ID },
@@ -219,7 +219,7 @@ app.post("https://jefflwhatsgood.herokuapp.com/newFoodItem", (req, res) => {
 });
 
 //Add New Review
-app.post("https://jefflwhatsgood.herokuapp.com/newReview", (req, res) => {
+app.post("/newReview", (req, res) => {
   const { ID, FoodID, reviewData, newAverageRating } = req.body;
   //Adds review to Restaurant db
   Restaurant.updateOne(
