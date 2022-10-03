@@ -57,21 +57,21 @@ const Login = () => {
       <div className="flex justify-center">
         <div className="py-6 px-8 mt-20 bg-white rounded shadow-xl">
           <h1 className="flex justify-center mb-8 font-bold text-3xl">Sign In</h1>
-          <form action="" class = '-mt-4'>
+          <form action="" className = '-mt-4'>
             <div className="mb-6">
-            <div class = 'flex justify-evenly'>
-              <div class = 'flex items-center justify-center border w-16 h-16 text-white rounded py-4 px-4 shadow-xl bg-red-600 hover:bg-red-700 mb-5 cursor-pointer' onClick = {google}>
-                <FaGoogle class ='text-3xl'/>  
+            <div className = 'flex justify-evenly'>
+              <div className = 'flex items-center justify-center border w-16 h-16 text-white rounded py-4 px-4 shadow-xl bg-red-600 hover:bg-red-700 mb-5 cursor-pointer' onClick = {google}>
+                <FaGoogle className ='text-3xl'/>  
               </div>
-              <div class = 'flex items-center justify-center border w-16 h-16 text-white rounded py-2 px-2 shadow-xl bg-blue-600 hover:bg-blue-700 mb-5 cursor-pointer' onClick = {google}>
-                <FaFacebook class ='text-3xl' />
+              <div className = 'flex items-center justify-center border w-16 h-16 text-white rounded py-2 px-2 shadow-xl bg-blue-600 hover:bg-blue-700 mb-5 cursor-pointer' onClick = {google}>
+                <FaFacebook className ='text-3xl' />
               </div>
-              <div class = 'flex items-center justify-center border w-16 h-16 text-white rounded py-2 px-2 shadow-xl bg-gray-700 hover:bg-gray-800 mb-5 cursor-pointer' onClick = {google}>
-                <FaGithub class ='text-3xl' />
+              <div className = 'flex items-center justify-center border w-16 h-16 text-white rounded py-2 px-2 shadow-xl bg-gray-700 hover:bg-gray-800 mb-5 cursor-pointer' onClick = {google}>
+                <FaGithub className ='text-3xl' />
               </div>
             </div>
-            <div class ='text-center m-2'>
-              <span class =''><hr></hr></span>
+            <div className ='text-center m-2'>
+              <span className =''><hr></hr></span>
             </div>
               <label for="name" className="block text-gray-800 font-bold">
                 Username:

@@ -147,7 +147,7 @@ const RestaurantDetails = () => {
         <div className = 'grid gap-2 grid-cols-1 sm:gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6'>
           {sortedMenuData.slice(3).map((menuItem) => {
             return (     
-               <div class = 'col'>
+               <div className = 'col'>
                 <ReviewCard key={menuItem.FoodID} props={menuItem} restID={id} />
                 </div>
             );

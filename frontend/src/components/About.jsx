@@ -5,7 +5,7 @@ import jeff from "../images/contact_images/jeff.jpg";
 const About = () => {
   return (
     <div className="flex flex-col min-w-full items-center  min-h-screen">
-      {/* <div class = 'text-4xl font-bold mt-5 md:mb-5 '> */}
+      {/* <div className = 'text-4xl font-bold mt-5 md:mb-5 '> */}
       <h1 className="text-3xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight mt-5 animate-fade-in-down">
         Meet The Team
       </h1>

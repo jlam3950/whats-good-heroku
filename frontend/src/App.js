@@ -31,7 +31,7 @@ function App() {
               <Route path = "/profile" element={<Profile />}></Route>
               <Route path = "/logout" element={<Logout />}></Route>
         </Routes>
-      <Footer class/>
+      <Footer/>
       </header>
     </div>
   );

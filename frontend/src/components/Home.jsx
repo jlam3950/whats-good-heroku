@@ -20,7 +20,7 @@ const Home = () => {
         <div className="flex flex-col-reverse justify-center items-center md:py-0 md:flex-row md:justify-evenly">
           <div className="flex flex-col items-center mt-10 md:mt-4 md:mb-0 lg:mb-24 text-center tracking-tight font-extrabold text-5xl md:ml-8 md:text-6xl lg:text-6xl xl:text-7xl md:w-1/2">   
             What's Good?
-            <div class = 'text-4xl max-w-lg text-white drop-shadow-2xl findthe md:text-5xl'>
+            <div className = 'text-4xl max-w-lg text-white drop-shadow-2xl findthe md:text-5xl'>
             Find the best items at every restaurant.
             </div>
           </div>
@@ -44,7 +44,7 @@ const Home = () => {
           </p>
         </div> */}
 
-      {/* <div class = 'display flex justify-end -z-10'>
+      {/* <div className = 'display flex justify-end -z-10'>
       <div className="bg-red-600 -mt-32 mr-2 w-1/6 h-32 absolute -z-20"></div>
       </div> */}
 
@@ -181,7 +181,7 @@ const Home = () => {
                         <h1 className="text-right text-3xl sm:text-5xl text-gray-800 dark:text-white tracking-tight">
                             What's good for breakfast?
                         </h1>
-                        <div class = 'text-right'>
+                        <div className = 'text-right'>
                           <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
                               Fill in the form to start a conversation
                           </p>

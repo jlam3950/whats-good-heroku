@@ -115,7 +115,7 @@ const Search = () => {
   };
 
   const GeoCode = () => {
-    const location = userAddress;
+    const location = "greenville,sc"
     axios
       .get("https://maps.googleapis.com/maps/api/geocode/json", {
         params: {

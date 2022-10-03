@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-2 lg:ml-4 ">
             <NavLink to="/">
               <h1 className="text-xl -m-4 md:mr-2 lg:text-3xl font-bold cursor-pointer ">
-                  <img src = {logo} class = 'h-8 mb-1' alt =''></img>
+                  <img src = {logo} className = 'h-8 mb-1' alt =''></img>
 
               </h1>
             </NavLink>
