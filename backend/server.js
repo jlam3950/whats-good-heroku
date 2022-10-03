@@ -115,7 +115,8 @@ app.get("/login/failed", (req, res) => {
   });
 });
 
-app.post("/register", (req, res) => {
+// app.post("/register", (req, res) => {
+app.post("https://jefflwhatsgood.herokuapp.com/register/register", (req, res) => {
   User.findOne({ username: req.body.username }, async (err, doc) => {
     if (err) throw err;
     if (doc) res.send("User Already Exists");
@@ -132,7 +133,8 @@ app.post("/register", (req, res) => {
   });
 });
 
-app.post("/getLocation", (req, res) => {
+app.post("https://jefflwhatsgood.herokuapp.com/register/getLocation", (req, res) => {
+// app.post("/getLocation", (req, res) => {
   const lat = req.body.lat;
   const long = req.body.long;
   const url = `https://api.yelp.com/v3/businesses/search?term=restaurants&latitude=${lat}&longitude=${long}`;
@@ -143,7 +145,8 @@ app.post("/getLocation", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.post("/getLocationWithAddress", (req, res) => {
+app.post("https://jefflwhatsgood.herokuapp.com/register/getLocation/getLocationWithAddress", (req, res) => {
+// app.post("/getLocationWithAddress", (req, res) => {
   const address = req.body.address;
   const url = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${address}`;
   const config = { headers: { Authorization: `Bearer ${key}` } };
@@ -153,18 +156,18 @@ app.post("/getLocationWithAddress", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.get("/user", (req, res) => {
+app.get("https://jefflwhatsgood.herokuapp.com/register/getLocation/user", (req, res) => {
   res.send(req.user);
 });
 
-app.post("/user", (req, res) => {
+app.post("https://jefflwhatsgood.herokuapp.com/register/getLocation/user", (req, res) => {
   req.logout(function (err) {
     if (err) throw err;
   });
 });
 
 // Checks DB if restaurant exists by ID, if so return restaurant data. Not sure if this works. It was based on the User.findOne()
-app.post("/checkDB", (req, res) => {
+app.post("https://jefflwhatsgood.herokuapp.com/register/getLocation/checkDB", (req, res) => {
   Restaurant.find({ ID: req.body.id }, async (err, doc) => {
     if (err) throw err;
     else {
@@ -174,7 +177,7 @@ app.post("/checkDB", (req, res) => {
 });
 
 //Test path, checks to see if we have any restaurant dat
-app.get("/check", (req, res) =>
+app.get("https://jefflwhatsgood.herokuapp.com/register/getLocation/check", (req, res) =>
   Restaurant.find({})
     .then((data) => {
       res.json(data);
@@ -184,7 +187,7 @@ app.get("/check", (req, res) =>
     })
 );
 
-app.post("/newRestaurant", (req, res) => {
+app.post("https://jefflwhatsgood.herokuapp.com/register/getLocation/newRestaurant", (req, res) => {
   const newRestaurant = new Restaurant(req.body);
   newRestaurant.save((error) => {
     if (error) {
@@ -198,7 +201,7 @@ app.post("/newRestaurant", (req, res) => {
 });
 
 //Add New Food Item
-app.post("/newFoodItem", (req, res) => {
+app.post("https://jefflwhatsgood.herokuapp.com/register/getLocation/newFoodItem", (req, res) => {
   const { ID, foodData } = req.body;
   Restaurant.updateOne(
     { ID: ID },
@@ -217,7 +220,7 @@ app.post("/newFoodItem", (req, res) => {
 });
 
 //Add New Review
-app.post("/newReview", (req, res) => {
+app.post("https://jefflwhatsgood.herokuapp.com/register/getLocation/newReview", (req, res) => {
   const { ID, FoodID, reviewData, newAverageRating } = req.body;
   //Adds review to Restaurant db
   Restaurant.updateOne(
