@@ -62,18 +62,6 @@ require("./passport-config")(passport);
 //   app.get('/', (req, res) => res.send('Please set to production'));
 // }
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../frontend/build')));
-
-  app.get('*', (req, res) =>
-    res.sendFile(
-      path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
-    )
-  );
-} else {
-  app.get('/', (req, res) => res.send('Please set to production'));
-}
-
 app.post("/login", (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
     if (err) throw err;
@@ -255,6 +243,18 @@ app.post("/newReview", (req, res) => {
     }
   );
 });
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+  app.get('*', (req, res) =>
+    res.sendFile(
+      path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
+    )
+  );
+} else {
+  app.get('/', (req, res) => res.send('Please set to production'));
+}
 
 app.listen(PORT, () => {
   console.log(`app is running on ${PORT}`);
