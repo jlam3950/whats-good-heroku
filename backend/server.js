@@ -48,6 +48,18 @@ app.use(passport.initialize());
 app.use(passport.session());
 require("./passport-config")(passport);
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+  // app.get('*', (req, res) =>
+  //   res.sendFile(
+  //     path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
+  //   )
+  // );
+} else {
+  app.get('/', (req, res) => res.send('Please set to production'));
+}
+
 
 //serve front end
 // if (process.env.NODE_ENV === 'production') {
@@ -245,15 +257,12 @@ app.post("/newReview", (req, res) => {
 });
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../frontend/build')));
-
+  // app.use(express.static(path.join(__dirname, '../frontend/build')));
   app.get('*', (req, res) =>
     res.sendFile(
       path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
     )
   );
-} else {
-  app.get('/', (req, res) => res.send('Please set to production'));
 }
 
 app.listen(PORT, () => {
