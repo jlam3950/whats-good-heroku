@@ -10,7 +10,9 @@ import {
   Marker,
 } from "@react-google-maps/api";
 import axios from "axios";
-let googleKey = "AIzaSyARaWZAiT2cK5RWBM83SmN2K_8WeBbuA-0";
+let googleKey = process.env.REACT_APP_GOOGLE_KEY;
+
+console.log(googleKey)
 
 const Search = () => {
   const [lat, setLat] = useState("");
@@ -115,7 +117,7 @@ const Search = () => {
   };
 
   const GeoCode = () => {
-    const location = "greenville,sc"
+    const location = userAddress;
     axios
       .get("https://maps.googleapis.com/maps/api/geocode/json", {
         params: {
