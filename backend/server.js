@@ -11,7 +11,7 @@ const User = require("./models/user");
 const Restaurant = require("./models/restaurant");
 const cors = require("cors");
 const app = express();
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 5500;;
 const connection_string = process.env.REACT_APP_MONGO_KEY;
 const key = process.env.REACT_APP_API_KEY;
 const axios = require("axios");
@@ -95,14 +95,14 @@ app.get(
   })
 );
 
-app.get(
-  "/google/callback",
-  passport.authenticate("google", { failureRedirect: "http://localhost:3000" }),
-  function (req, res) {
-    console.log("success!");
-    res.redirect("http://localhost:3000");
-  }
-);
+// app.get(
+//   "/google/callback",
+//   passport.authenticate("google", { failureRedirect: "http://localhost:3000" }),
+//   function (req, res) {
+//     console.log("success!");
+//     res.redirect("http://localhost:3000");
+//   }
+// );
 
 app.get("/login/success", (req, res) => {
   res.status(200);

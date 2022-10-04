@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "proxy": "http://localhost:5500/",
   "description": "<img src = \"frontend/src/images/logo_img 4.jpg\" width = '300px'>",
   "main": "index.js",
   "scripts": {
