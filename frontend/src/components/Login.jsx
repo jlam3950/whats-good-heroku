@@ -13,9 +13,9 @@ const Login = () => {
   const navigate = useNavigate();
   const history = useNavigate();
 
-  const google = () => {
-    window.open("http://localhost:5500/google", "_self")
-  }
+  // const google = () => {
+  //   window.open("http://localhost:5500/google", "_self")
+  // }
 
   const saveUser = (login) => {
     dispatch(updateUser(login));
@@ -59,7 +59,7 @@ const Login = () => {
           <h1 className="flex justify-center mb-8 font-bold text-3xl">Sign In</h1>
           <form action="" className = '-mt-4'>
             <div className="mb-6">
-            <div className = 'flex justify-evenly'>
+            {/* <div className = 'flex justify-evenly'>
               <div className = 'flex items-center justify-center border w-16 h-16 text-white rounded py-4 px-4 shadow-xl bg-red-600 hover:bg-red-700 mb-5 cursor-pointer' onClick = {google}>
                 <FaGoogle className ='text-3xl'/>  
               </div>
@@ -69,7 +69,7 @@ const Login = () => {
               <div className = 'flex items-center justify-center border w-16 h-16 text-white rounded py-2 px-2 shadow-xl bg-gray-700 hover:bg-gray-800 mb-5 cursor-pointer' onClick = {google}>
                 <FaGithub className ='text-3xl' />
               </div>
-            </div>
+            </div> */}
             <div className ='text-center m-2'>
               <span className =''><hr></hr></span>
             </div>
