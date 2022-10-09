@@ -12,8 +12,6 @@ import {
 import axios from "axios";
 let googleKey = process.env.REACT_APP_GOOGLE_KEY;
 
-console.log(googleKey)
-
 const Search = () => {
   const [lat, setLat] = useState("");
   const [long, setLong] = useState("");
