@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     // origin: "http://localhost:3000",
-    origin: "https://jefflwhatsgood.herokuapp.com/",
+    origin: "https://jefflwhatsgood.herokuapp.com",
     credentials: true,
   })
 );
