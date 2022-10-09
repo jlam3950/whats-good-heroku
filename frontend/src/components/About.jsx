@@ -15,9 +15,7 @@ const About = () => {
             <img src={imposter} className="rounded-md m-4 px-4" alt=""></img>
           </div>
           <div className="flex flex-col justify-center md:w-1/2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-            laudantium dolor dolores voluptates! Dolores totam reiciendis fuga
-            tempore a? Sequi?
+            Seth is a full-stack developer, based out of Houston, TX. He works as a mechanical engineer, and enjoys gaming.
           </div>
         </div>
       </div>
@@ -27,9 +25,7 @@ const About = () => {
             <img src={jeff} className="rounded-md m-4 px-4 h-48" alt=""></img>
           </div>
           <div className="flex flex-col justify-center md:w-1/2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-            laudantium dolor dolores voluptates! Dolores totam reiciendis fuga
-            tempore a? Sequi?
+            Jeff is a full-stack developer, based out of Greenville, SC. He has previously worked as a physical therapist, and enjoys rock climbing. 
           </div>
         </div>
       </div>
